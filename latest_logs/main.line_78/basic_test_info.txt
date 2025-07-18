@@ -1,0 +1,57 @@
+base_case.py:78:SB
+--------------------------------------------------------------------
+Last Page: [WARNING! Browser Not Open!]
+ Duration: 17.44s
+  Browser: Chrome 138.0.7204.101
+   Driver: chromedriver 138.0.7204.157
+Timestamp: 1752760560  (Unix Timestamp)
+     Date: Thursday, 17 July 2025
+     Time: 7:26:00 PM  (India Standard Time, UTC+05:30)
+--------------------------------------------------------------------
+Traceback:
+  Traceback (most recent call last):
+  File "c:\Users\tesla\banthry_browser_agent\backend\main.py", line 40, in login_and_send_email
+    sb.type('input[name="password"]', password)
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\base_case.py", line 1102, in type
+    self.update_text(selector, text, by=by, timeout=timeout, retry=retry)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\base_case.py", line 896, in update_text
+    element = self.wait_for_element_clickable(
+        selector, by=by, timeout=timeout
+    )
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\base_case.py", line 9235, in wait_for_element_clickable
+    return page_actions.wait_for_element_clickable(
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^
+        self.driver,
+        ^^^^^^^^^^^^
+    ...<3 lines>...
+        original_selector=original_selector,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\page_actions.py", line 1059, in wait_for_element_clickable
+    timeout_exception(NoSuchElementException, message)
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\page_actions.py", line 267, in timeout_exception
+    raise exc(msg)
+seleniumbase.common.exceptions.NoSuchElementException: Message: 
+ Element {input[name="password"]} was not present after 10 seconds!
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "c:\Users\tesla\banthry_browser_agent\backend\main.py", line 73, in login_and_send_email
+    sb.save_screenshot("error_screenshot.png")
+    ~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\base_case.py", line 4453, in save_screenshot
+    self.wait_for_ready_state_complete()
+    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\base_case.py", line 4812, in wait_for_ready_state_complete
+    self._check_browser()
+    ~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\tesla\AppData\Roaming\Python\Python313\site-packages\seleniumbase\fixtures\base_case.py", line 9507, in _check_browser
+    raise NoSuchWindowException("Active window was already closed!")
+selenium.common.exceptions.NoSuchWindowException: Message: Active window was already closed!
+

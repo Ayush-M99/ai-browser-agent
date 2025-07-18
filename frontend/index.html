@@ -1,0 +1,29 @@
+<!-- frontend/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Banthry AI Email Agent</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="chat-container">
+    <h2>📧 Banthry Email Agent</h2>
+    <div id="chat-box" class="chat-box"></div>
+
+    <input type="text" id="intent" placeholder="Describe your email intent (e.g., 'Send a leave request')" style="width:100%;margin-bottom:10px;" />
+    <button type="button" onclick="requestEmailDraft()">Generate Email</button>
+
+    <form id="email-form">
+      <input type="email" id="to" placeholder="Recipient Email" required />
+      <input type="text" id="subject" placeholder="Subject" required readonly />
+      <textarea id="body" placeholder="Email Body" required readonly></textarea>
+      <button type="submit">Send Email</button>
+    </form>
+  </div>
+
+  <script src="https://cdn.socket.io/4.4.1/socket.io.min.js"></script>
+  <script src="socket.js"></script>
+</body>
+</html>

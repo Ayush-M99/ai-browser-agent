@@ -1,0 +1,26 @@
+# Core backend
+Flask>=2.2
+Flask-SocketIO>=5.3
+python-dotenv>=1.0
+
+# Browser automation
+selenium>=4.10
+undetected-chromedriver>=3.5
+
+# AI email generation (choose one)
+openai>=1.0  # For OpenAI API (optional)
+azure-ai-inference>=1.0  # For GitHub Copilot/ChatGPT 4.1 via Azure
+azure-core>=1.29
+
+# Real-time communication
+python-socketio>=5.8
+
+# For screenshots and image handling (if needed)
+pillow>=9.0
+
+# If using gevent for production (optional, not for Python 3.13+)
+# gevent>=22.10
+# gevent-websocket>=0.10
+
+# For Windows compatibility (optional)
+colorama>=0.4 
