@@ -112,6 +112,9 @@ Go to [http://localhost:5000/](http://localhost:5000/) in your browser.
 ### **Real-Time Status**
 ![Frontend UI](screenshots/frontend_ui.png)
 
+### **Email Draft Generated**
+![Email Draft Successfully Generated](screenshots/email_draft.png)
+
 *(Add your own GIFs/screenshots of the browser being controlled!)*
 
 ---
